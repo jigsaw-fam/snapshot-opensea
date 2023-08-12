@@ -12,6 +12,7 @@ headers     = {
     "X-API-KEY": key,
 }
 
+# https://docs.opensea.io/reference/api-overview
 API_COLLECTION = "https://api.opensea.io/v2/collection/{}/nfts?limit={}&next={}"
 API_NFT_INFO   = "https://api.opensea.io/v2/chain/{}/contract/{}/nfts/{}"
 
