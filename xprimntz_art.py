@@ -56,6 +56,8 @@ while (next_page is not None):
 chunk = sorted(list(chunk.items()), key=lambda x: x[1], reverse=True)
 
 # write to file
-out = "\n".join([ ",".join([ r[0], str(r[1]) ]) for r in chunk ])
+# https://docs.manifold.xyz/v/manifold-studio/references/audiences#manually-via-csv
+out = "address,value\n"
+out += "\n".join([ ",".join([ r[0], str(r[1]) ]) for r in chunk ])
 with open(out_path, "w") as f:
     f.write(out)
